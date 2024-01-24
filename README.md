@@ -73,3 +73,7 @@ public class CurrencyConverterApp {
 Submit your completed `CurrencyConverterApp.java` file with the required functionality implemented. Make sure to test your application with different inputs to ensure it works as expected.
 
 ---
+
+## Result
+
+![pic1](./main/resources/pic1.png)

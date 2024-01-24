@@ -13,7 +13,7 @@ public class UserThread extends Thread{
 
     @Override
     public void run(){
-        double result = Main.performCurrencyConversion(amount,fromCurrency, toCurrency)
+        double result = Main.performCurrencyConversion(amount,fromCurrency, toCurrency);
         System.out.println("Conversion result: " + result);
     }
 

@@ -28,11 +28,20 @@ public class Main {
         String toCurrency = input.nextLine();
 
         // create and start the conversion thread(user thread)
+        UserThread userThread = new UserThread(amount, fromCurrency, toCurrency);
+        userThread.start();
 
         // create and start the background daemon thread
+        DaemonThread daemonThread = new DaemonThread();
+        daemonThread.setDaemon(true);
+        daemonThread.start();
 
         // wait for the conversion thread to complete
-
+            try{
+                userThread.join();
+            }catch(InterruptedException e){
+                e.printStackTrace();
+            }
         // close the scanner
         input.close();
 
